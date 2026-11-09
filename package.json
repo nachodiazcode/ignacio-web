@@ -1,0 +1,26 @@
+{
+  "name": "ignacio-web",
+  "private": true,
+  "description": "Sitio personal de Ignacio Díaz para encargar sitios web.",
+  "scripts": {
+    "develop": "gatsby develop -H 127.0.0.1 -p 8010",
+    "build": "gatsby build",
+    "serve": "gatsby serve -H 127.0.0.1 -p 8010",
+    "clean": "gatsby clean"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@fontsource/newsreader": "^5.2.8",
+    "@fontsource/public-sans": "^5.2.7",
+    "gatsby": "^5.15.0",
+    "gatsby-plugin-image": "^3.15.0",
+    "gatsby-plugin-sharp": "^5.15.0",
+    "gatsby-plugin-sitemap": "^6.15.0",
+    "gatsby-source-filesystem": "^5.15.0",
+    "gatsby-transformer-sharp": "^5.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

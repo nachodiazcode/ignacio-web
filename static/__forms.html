@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+    <meta charset="utf-8" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <form name="contacto" action="/gracias" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contacto" />
+      <input type="hidden" name="subject" value="Pedido de sitio web" />
+      <input name="bot-field" />
+      <input type="text" name="nombre" />
+      <input type="email" name="email" />
+      <input type="text" name="negocio" />
+      <select name="tipo">
+        <option>Sitio de presentación</option>
+        <option>Landing</option>
+        <option>Sitio editable</option>
+        <option>Todavía no sé</option>
+      </select>
+      <textarea name="mensaje"></textarea>
+    </form>
+  </body>
+</html>
