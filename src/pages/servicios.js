@@ -14,34 +14,34 @@ export default function Servicios() {
           lead="Tres formatos. El plazo de abajo es una referencia para conversar: el compromiso queda en la propuesta, cuando ya sabemos qué hay que hacer."
         />
         {services.map((service, index) => (
-          <article className="offer" key={service.id} id={service.id}>
+          <article className="offer reveal" key={service.id} id={service.id}>
             <div>
               <span className="idx">{String(index + 1).padStart(2, "0")}</span>
               <h2>{service.name}</h2>
-              <p>{service.forWhom}</p>
+              <p className="for-whom">{service.forWhom}</p>
             </div>
             <div>
-              <p>{service.summary}</p>
-              <ul>
+              <p className="summary">{service.summary}</p>
+              <ul className="offer-list">
                 {service.includes.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <p>{service.excludes}</p>
-              <p>
-                <strong>Plazo de referencia. </strong>
+              <p className="excludes">{service.excludes}</p>
+              <p className="timeframe">
+                <strong>Plazo de referencia: </strong>
                 {service.time}
               </p>
             </div>
           </article>
         ))}
 
-        <section className="section" aria-labelledby="cuidado">
+        <section className="section reveal" aria-labelledby="cuidado">
           <div className="section-head">
             <h2 id="cuidado">Velocidad y buscadores, de fábrica</h2>
           </div>
-          <div className="care">
-            <article className="panel">
+          <div className="care reveal-stagger">
+            <article className="panel reveal">
               <h3>Que cargue pronto</h3>
               <p>
                 Cada página se publica ya armada. El visitante recibe HTML, no una pantalla en blanco mientras
@@ -49,7 +49,7 @@ export default function Servicios() {
                 con el sitio.
               </p>
             </article>
-            <article className="panel">
+            <article className="panel reveal">
               <h3>Que se pueda encontrar</h3>
               <p>
                 Cada página tiene su título, su descripción y su dirección. Hay un mapa del sitio para Google,
@@ -58,12 +58,12 @@ export default function Servicios() {
               </p>
             </article>
           </div>
-          <p className="note">
+          <p className="note reveal">
             Hablas conmigo, no con una cuenta de ventas. Partí en diseño web y después programé interfaces en
             serio, entre otros en BanChile Inversiones. La trayectoria completa está en el{" "}
-            <a href="https://nachodiazcode.netlify.app/">portafolio</a>.
+            <a href="https://nachodiazcode.netlify.app/" target="_blank" rel="noreferrer">portafolio ↗</a>.
           </p>
-          <p>
+          <p className="reveal">
             <Link className="button" to="/contacto">
               Pedir una propuesta
             </Link>

@@ -11,7 +11,7 @@ function Thumb({ slug }) {
         src="../images/london-college-desktop.png"
         alt="Inicio del sitio del Colegio London"
         width={1200}
-        quality={70}
+        quality={75}
         placeholder="dominantColor"
         formats={["auto", "webp", "avif"]}
       />
@@ -19,11 +19,25 @@ function Thumb({ slug }) {
   }
   if (slug === "lupulos") {
     return (
-      <StaticImage src="../images/lupulos.jpg" alt="Captura de Lúpulos" width={1200} quality={70} placeholder="dominantColor" formats={["auto", "webp", "avif"]} />
+      <StaticImage
+        src="../images/lupulos.jpg"
+        alt="Captura de Lúpulos"
+        width={1200}
+        quality={75}
+        placeholder="dominantColor"
+        formats={["auto", "webp", "avif"]}
+      />
     )
   }
   return (
-    <StaticImage src="../images/vibratto.jpg" alt="Captura de Vibratto" width={1200} quality={70} placeholder="dominantColor" formats={["auto", "webp", "avif"]} />
+    <StaticImage
+      src="../images/vibratto.jpg"
+      alt="Captura de Vibratto"
+      width={1200}
+      quality={75}
+      placeholder="dominantColor"
+      formats={["auto", "webp", "avif"]}
+    />
   )
 }
 
@@ -39,11 +53,20 @@ export default function Trabajos() {
         />
         <div className="work-list">
           {works.map((work, index) => (
-            <Link className={index === 0 ? "work-row is-feature" : "work-row"} to={`/trabajos/${work.slug}`} key={work.slug}>
+            <Link
+              className={index === 0 ? "work-row is-feature reveal" : "work-row reveal"}
+              to={`/trabajos/${work.slug}`}
+              key={work.slug}
+            >
               <div className="work-copy">
-                <span className="idx">{String(index + 1).padStart(2, "0")}</span>
-                <span className="kind">{work.kind} · {work.year}</span>
-                <h2>{work.title}</h2>
+                <div className="work-meta-top">
+                  <span className="idx">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="kind-badge">{work.kind} · {work.year}</span>
+                </div>
+                <h2>
+                  <span>{work.title}</span>
+                  <span className="work-arrow" aria-hidden="true">→</span>
+                </h2>
                 <p>{work.summary}</p>
               </div>
               <div className="work-media">
