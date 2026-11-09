@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Layout } from "../components/Layout"
 import { JsonLd, Seo, useSite } from "../components/Seo"
-import { ProjectSimulator } from "../components/ProjectSimulator"
 import { faqs, guarantees, homeSchema, services, steps, works } from "../data/site"
 
 function WorkThumb({ slug }) {
@@ -80,10 +79,7 @@ export default function Home() {
             />
             <figcaption>
               <span>Ignacio Díaz</span>
-              <span className="hero-status-pill">
-                <span className="status-ping" aria-hidden="true" />
-                Disponible para proyectos
-              </span>
+              <span>Disponible</span>
             </figcaption>
           </figure>
         </div>
@@ -138,8 +134,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        <ProjectSimulator />
 
         <section className="section" aria-labelledby="proceso-titulo">
           <div className="section-head">

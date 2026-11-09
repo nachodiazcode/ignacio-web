@@ -8,8 +8,6 @@ import "@fontsource/public-sans/latin-500.css"
 import "@fontsource/public-sans/latin-600.css"
 import "../styles/global.css"
 import { email, github, portfolio } from "../data/site"
-import { ScrollProgress } from "./ScrollProgress"
-import { ProjectBot } from "./ProjectBot"
 
 const links = [
   { href: "/servicios", label: "Servicios" },
@@ -35,7 +33,6 @@ export function Layout({ children }) {
 
   return (
     <>
-      <ScrollProgress />
       <a className="skip" href="#contenido">
         Saltar al contenido
       </a>
@@ -79,7 +76,6 @@ export function Layout({ children }) {
         </div>
         <p className="legal">El alcance, el plazo y el precio quedan por escrito antes de empezar.</p>
       </footer>
-      <ProjectBot />
     </>
   )
 }
