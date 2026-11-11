@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Link } from "gatsby"
-import { email, services, faqs } from "../data/site"
+import { email, services } from "../data/site"
 
 const INITIAL_MESSAGES = [
   {
@@ -164,7 +164,9 @@ export function ProjectBot() {
 
       let timeNote = matchedService.time
       if (textStatus === "none") {
-        timeNote += " (sumar ~1 semana adicional para estructuración de textos)."
+        timeNote += " (+1 semana para armado de textos)."
+      } else if (timePref === "fast") {
+        timeNote += " (entrega prioritaria)."
       }
 
       addBotMessage(

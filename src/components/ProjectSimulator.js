@@ -27,7 +27,7 @@ export function ProjectSimulator() {
       <div className="simulator-box">
         {/* Step 1: Selector de tipo de sitio */}
         <div className="simulator-controls">
-          <label className="sim-control-label">1. Elige el tipo de sitio:</label>
+          <span className="sim-control-label">1. Elige el tipo de sitio:</span>
           <div className="sim-buttons-grid" role="tablist">
             {services.map((srv) => (
               <button
