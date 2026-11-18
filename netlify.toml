@@ -32,3 +32,13 @@
   from = "/trabajos/learning-music-plus"
   to = "/trabajos"
   status = 301
+
+[[redirects]]
+  from = "/trabajos/lupulos"
+  to = "/trabajos"
+  status = 301
+
+[[redirects]]
+  from = "/trabajos/vibratto"
+  to = "/trabajos"
+  status = 301

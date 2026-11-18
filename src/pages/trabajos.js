@@ -9,7 +9,7 @@ function Thumb({ slug }) {
   if (slug === "colegio-london") {
     return (
       <StaticImage
-        src="../images/london-college-desktop.png"
+        src="../images/london-college-desktop.jpg"
         alt="Inicio del sitio del Colegio London"
         width={1200}
         quality={70}
@@ -18,11 +18,11 @@ function Thumb({ slug }) {
       />
     )
   }
-  if (slug === "lupulos") {
+  if (slug === "vocestoons") {
     return (
       <StaticImage
-        src="../images/lupulos.jpg"
-        alt="Captura de Lúpulos"
+        src="../images/vocestoons.jpg"
+        alt="Inicio del sitio de VocesToons"
         width={1200}
         quality={70}
         placeholder="dominantColor"
@@ -30,23 +30,13 @@ function Thumb({ slug }) {
       />
     )
   }
-  return (
-    <StaticImage
-      src="../images/vibratto.jpg"
-      alt="Captura de Vibratto"
-      width={1200}
-      quality={70}
-      placeholder="dominantColor"
-      formats={["auto", "webp", "avif"]}
-    />
-  )
+  return null
 }
 
 const FILTERS = [
   { id: "all", label: "Todos los casos" },
   { id: "institucional", label: "Institucional", match: "institucional" },
-  { id: "comunidad", label: "Comunidad y nicho", match: "comunidad" },
-  { id: "producto", label: "Producto web", match: "producto" },
+  { id: "presentacion", label: "Presentación", match: "presentación" },
 ]
 
 export default function Trabajos() {
@@ -68,8 +58,8 @@ export default function Trabajos() {
         <Crumbs items={[{ label: "Inicio", to: "/" }, { label: "Trabajos" }]} />
         <PageHead
           eyebrow="Trabajos"
-          title="Sitios y productos que ya están en línea."
-          lead="Tres piezas recientes. El Colegio London es el caso más cercano a un sitio de negocio. Los otros muestran un producto y una comunidad."
+          title="Sitios que ya están en línea."
+          lead="Dos piezas recientes: un sitio institucional para un colegio y un sitio de presentación para un estudio de voces."
         />
 
         {/* Interactive Filter Pills */}
@@ -133,7 +123,7 @@ export function Head() {
     <>
       <Seo
         title="Trabajos"
-        description="Casos publicados: Colegio London, Lúpulos y Vibratto."
+        description="Casos publicados: Colegio London y VocesToons."
         pathname="/trabajos"
       />
       <JsonLd

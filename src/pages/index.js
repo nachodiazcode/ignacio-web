@@ -9,7 +9,7 @@ function WorkThumb({ slug }) {
   if (slug === "colegio-london") {
     return (
       <StaticImage
-        src="../images/london-college-desktop.png"
+        src="../images/london-college-desktop.jpg"
         alt="Inicio del sitio del Colegio London"
         width={1100}
         quality={70}
@@ -18,11 +18,11 @@ function WorkThumb({ slug }) {
       />
     )
   }
-  if (slug === "lupulos") {
+  if (slug === "vocestoons") {
     return (
       <StaticImage
-        src="../images/lupulos.jpg"
-        alt="Captura de Lúpulos"
+        src="../images/vocestoons.jpg"
+        alt="Inicio del sitio de VocesToons"
         width={1100}
         quality={70}
         placeholder="dominantColor"
@@ -30,16 +30,7 @@ function WorkThumb({ slug }) {
       />
     )
   }
-  return (
-    <StaticImage
-      src="../images/vibratto.jpg"
-      alt="Captura de Vibratto"
-      width={1100}
-      quality={70}
-      placeholder="dominantColor"
-      formats={["auto", "webp", "avif"]}
-    />
-  )
+  return null
 }
 
 export default function Home() {

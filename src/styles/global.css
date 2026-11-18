@@ -483,12 +483,9 @@ main:focus { outline: none; }
   border-radius: 1.15rem;
 }
 
-.work-media .gatsby-image-wrapper {
-  aspect-ratio: 16 / 10;
-}
-
+.work-media .gatsby-image-wrapper,
 .work-row.is-feature .work-media .gatsby-image-wrapper {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 1;
 }
 
 .work-media .gatsby-image-wrapper,
